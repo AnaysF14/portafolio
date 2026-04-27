@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anays Flores — Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="bgCanvas"></canvas>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ═══ NAV ═══ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#">
+      <span class="bracket">&lt;</span>AF<span class="bracket">/&gt;</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero"       class="nav-a active">inicio</a></li>
+      <li><a href="#about"      class="nav-a">sobre_mí</a></li>
+      <li><a href="#skills"     class="nav-a">skills</a></li>
+      <li><a href="#projects"   class="nav-a">proyectos</a></li>
+      <li><a href="#experience" class="nav-a">experiencia</a></li>
+      <li><a href="#contact"    class="nav-a">contacto</a></li>
+    </ul>
+    <a class="btn-cv" href="assets/cv.pdf" download>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Descargar CV
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#hero">Inicio</a><a href="#about">Sobre_mí</a>
+    <a href="#skills">Skills</a><a href="#projects">Proyectos</a>
+    <a href="#experience">Experiencia</a><a href="#contact">Contacto</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-wrap">
+
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        <span id="eyebrowType"></span>
+        <span class="eyebrow-cursor blink">▍</span>
+      </div>
+
+      <h1 class="hero-h1">
+        <span class="h1-top">Erika Anays</span>
+        <span class="h1-bot">Morales <em>Flores</em></span>
+      </h1>
+
+      <div class="code-card">
+        <div class="code-topbar">
+          <span class="wdot r"></span><span class="wdot y"></span><span class="wdot g"></span>
+          <span class="code-fname">perfil.py</span>
+          <span class="code-lang">Python</span>
+        </div>
+        <pre class="code-pre" id="codePre"></pre>
+      </div>
+
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">
+          Ver proyectos
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn-ghost">Contáctame</a>
+      </div>
+
+      <div class="hero-counters">
+        <div class="hc-item">
+          <span class="hc-n" data-to="5">0</span><span class="hc-s">+</span>
+          <span class="hc-l">Módulos Odoo</span>
+        </div>
+        <div class="hc-sep"></div>
+        <div class="hc-item">
+          <span class="hc-n" data-to="4">0</span><span class="hc-s">+</span>
+          <span class="hc-l">Proyectos</span>
+        </div>
+        <div class="hc-sep"></div>
+        <div class="hc-item">
+          <span class="hc-n" data-to="1">0</span><span class="hc-s">+</span>
+          <span class="hc-l">Años exp.</span>
+        </div>
+        <div class="hc-sep"></div>
+        <div class="hc-item">
+          <span class="hc-n" data-to="2">0</span><span class="hc-s"></span>
+          <span class="hc-l">Certificaciones</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="photo-wrap">
+        <div class="photo-halo"></div>
+        <div class="photo-ring-spin"></div>
+        <img src="assets/photo.jpeg" alt="Anays Flores" class="hero-img">
+        <div class="photo-corner c-tl"></div>
+        <div class="photo-corner c-tr"></div>
+        <div class="photo-corner c-bl"></div>
+        <div class="photo-corner c-br"></div>
+        <div class="status-badge">
+          <span class="status-dot"></span> Disponible para proyectos
+        </div>
+      </div>
+      <div class="chip ch1"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> Node.js</div>
+      <div class="chip ch2"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 0 20"/></svg> React</div>
+      <div class="chip ch3"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg> Odoo ERP</div>
+      <div class="chip ch4"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg> SQL</div>
+    </div>
+
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-mouse"><div class="scroll-ball"></div></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-n">01.</span>
+      <h2>Sobre <span class="gold">Mí</span></h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>Soy programadora egresada de la <strong>Universidad Tecnológica de Aguascalientes</strong>, especializada en desarrollo web, ERP y aplicaciones multiplataforma.</p>
+        <p>Actualmente trabajo en el <strong>Área de Sistemas de SigueMED</strong>, donde lidero la implementación de <span class="gold">Odoo Enterprise 19</span>: módulos de expediente médico, farmacia, facturación, POS e inventario.</p>
+        <p>Me apasiona la tecnología. Construyo herramientas que facilitan el trabajo de los profesionales de la salud y optimizan el crecimiento del negocio.</p>
+        <div class="cert-list">
+          <div class="cert-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <div><strong>Tecnolochicas PRO</strong><span>HTML5, CSS3, JavaScript · 2023</span></div>
+          </div>
+          <div class="cert-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <div><strong>Cisco Networking Academy</strong><span>IoT · Redes y Seguridad · 2023</span></div>
+          </div>
+        </div>
+        <div class="lang-row">
+          <span>Español <span class="gold mono">nativo</span></span>
+          <span>Inglés <span class="mono" style="color:var(--w3)">intermedio</span></span>
+        </div>
+      </div>
+
+      <div class="terminal-card reveal">
+        <div class="term-bar">
+          <span class="wdot r"></span><span class="wdot y"></span><span class="wdot g"></span>
+          <span class="term-t">anays@portfolio ~ zsh</span>
+        </div>
+        <div class="term-body" id="terminalBody"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SKILLS ═══ -->
+<section id="skills">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-n">02.</span>
+      <h2>Stack <span class="gold">técnico</span></h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="skills-grid">
+
+      <div class="sk-card reveal" style="--d:0ms">
+        <div class="sk-top">
+          <div class="sk-ico gold-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h4M7 11h8M7 14h5"/></svg></div>
+          <span class="sk-pct">92%</span>
+        </div>
+        <h3>Odoo / ERP</h3>
+        <p>Odoo Enterprise 19 end-to-end. Studio, módulos clínicos, POS, inventario y facturación.</p>
+        <div class="sk-bar-bg"><div class="sk-bar" data-w="92"></div></div>
+        <div class="sk-tags"><span>Studio</span><span>Python</span><span>XML</span><span>v19</span></div>
+      </div>
+
+      <div class="sk-card reveal" style="--d:80ms">
+        <div class="sk-top">
+          <div class="sk-ico blue-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <span class="sk-pct">80%</span>
+        </div>
+        <h3>Python / Backend</h3>
+        <p>APIs, automatizaciones, lógica de negocio y modelos de datos. Node.js como complemento.</p>
+        <div class="sk-bar-bg"><div class="sk-bar" data-w="80"></div></div>
+        <div class="sk-tags"><span>Python</span><span>Node.js</span><span>REST API</span></div>
+      </div>
+
+      <div class="sk-card reveal" style="--d:160ms">
+        <div class="sk-top">
+          <div class="sk-ico blue-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20"/></svg></div>
+          <span class="sk-pct">78%</span>
+        </div>
+        <h3>React / Frontend</h3>
+        <p>Interfaces modernas con React y JavaScript. Diseño UI centrado en usabilidad y experiencia.</p>
+        <div class="sk-bar-bg"><div class="sk-bar" data-w="78"></div></div>
+        <div class="sk-tags"><span>React</span><span>JavaScript</span><span>HTML/CSS</span></div>
+      </div>
+
+      <div class="sk-card reveal" style="--d:0ms">
+        <div class="sk-top">
+          <div class="sk-ico gold-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+          <span class="sk-pct">82%</span>
+        </div>
+        <h3>Bases de datos</h3>
+        <p>Modelado relacional, consultas optimizadas y gestión de datos clínicos y empresariales.</p>
+        <div class="sk-bar-bg"><div class="sk-bar" data-w="82"></div></div>
+        <div class="sk-tags"><span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span></div>
+      </div>
+
+      <div class="sk-card reveal" style="--d:80ms">
+        <div class="sk-top">
+          <div class="sk-ico blue-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div>
+          <span class="sk-pct">75%</span>
+        </div>
+        <h3>Git / GitHub</h3>
+        <p>Control de versiones, repos públicos, documentación y GitHub Pages para deploy.</p>
+        <div class="sk-bar-bg"><div class="sk-bar" data-w="75"></div></div>
+        <div class="sk-tags"><span>Git</span><span>GitHub</span><span>Pages</span></div>
+      </div>
+
+      <div class="sk-card reveal" style="--d:160ms">
+        <div class="sk-top">
+          <div class="sk-ico gold-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <span class="sk-pct">70%</span>
+        </div>
+        <h3>Redes / Infraestructura</h3>
+        <p>Microsoft 365, DNS/MX, cPanel, IoT y seguridad de redes. Certificación Cisco.</p>
+        <div class="sk-bar-bg"><div class="sk-bar" data-w="70"></div></div>
+        <div class="sk-tags"><span>M365</span><span>DNS</span><span>cPanel</span><span>Cisco</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROJECTS ═══ -->
+<section id="projects">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-n">03.</span>
+      <h2>Mis <span class="gold">proyectos</span></h2>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="pf-wrap reveal">
+      <button class="pf-btn active" data-f="all">todos</button>
+      <button class="pf-btn" data-f="erp">ERP / Odoo</button>
+      <button class="pf-btn" data-f="web">web / app</button>
+      <button class="pf-btn" data-f="wip">en construcción</button>
+    </div>
+
+    <div class="proj-grid">
+
+      <div class="p-card featured reveal" data-cat="erp">
+        <div class="p-img erp-img">
+          <div class="p-img-code"><span class="c-kw">import</span> odoo<br><span class="c-kw">class</span> <span class="c-cn">SigueMED</span>(models.Model):<br>&nbsp;&nbsp;<span class="c-pr">_name</span> = <span class="c-st">'clinic.record'</span></div>
+        </div>
+        <div class="p-over"><a href="#" class="p-over-btn">Ver proyecto ↗</a></div>
+        <div class="p-body">
+          <div class="p-meta"><span class="p-badge gold-b">⭐ Destacado</span><span class="p-yr">2026–presente</span></div>
+          <h3>SigueMED — ERP Clínico</h3>
+          <p>Implementación completa de Odoo Enterprise 19. Expediente médico, nota médica, hoja de enfermería, farmacia POS, inventario, facturación y suscripciones.</p>
+          <div class="p-stack"><span>Odoo 19</span><span>Python</span><span>XML</span><span>Studio</span><span>PostgreSQL</span></div>
+        </div>
+      </div>
+
+      <div class="p-card reveal" data-cat="web">
+        <div class="p-img qr-img">
+          <div class="p-img-code"><span class="c-kw">def</span> <span class="c-fn">scan_qr</span>(student_id):<br>&nbsp;&nbsp;attendance.<span class="c-fn">register</span>(<br>&nbsp;&nbsp;&nbsp;&nbsp;student_id, now()<br>&nbsp;&nbsp;)</div>
+        </div>
+        <div class="p-over"><a href="https://movieinf.vercel.app/" class="p-over-btn">Ver proyecto ↗</a></div>
+        <div class="p-body">
+          <div class="p-meta"><span class="p-badge">Universidad</span><span class="p-yr">2023</span></div>
+          <h3>App informativa Movieinf</h3>
+          <p>Información de nuevas películas, administración y control de películas por ver, reseñas, recordatorios.</p>
+          <div class="p-stack"><span>Python</span><span>JavaScript</span><span>MySQL</span></div>
+        </div>
+      </div>
+
+      <div class="p-card reveal" data-cat="web">
+        <div class="p-img pos-img">
+          <div class="p-img-code"><span class="c-kw">const</span> <span class="c-pr">checkout</span> = (<span class="c-va">cart</span>) =&gt; {<br>&nbsp;&nbsp;<span class="c-kw">return</span> cart.<span class="c-fn">reduce</span>(<br>&nbsp;&nbsp;&nbsp;&nbsp;(t,i) =&gt; t + i.price, <span class="c-st">0</span><br>&nbsp;&nbsp;)<br>}</div>
+        </div>
+        <div class="p-over"><a href="#" class="p-over-btn">Ver proyecto ↗</a></div>
+        <div class="p-body">
+          <div class="p-meta"><span class="p-badge">Universidad </span><span class="p-yr">2025</span></div>
+          <h3>Punto de Venta</h3>
+          <p>POS completo para empresa real. Gestión de productos, inventario, ventas y generación de reportes.</p>
+          <div class="p-stack"><span>JavaScript</span><span>PHP</span><span>MySQL</span></div>
+        </div>
+      </div>
+
+      <div class="p-card reveal" data-cat="web">
+        <div class="p-img citas-img">
+          <div class="p-img-code"><span class="c-cn">POST</span> /api/citas<br>{ <span class="c-pr">Notas</span>: <span class="c-st">"Dr. García"</span>,<br>&nbsp;&nbsp;<span class="c-pr">date</span>: <span class="c-st">"2025-05-10"</span>,<br>&nbsp;&nbsp;<span class="c-pr">patient</span>: patient_id }</div>
+        </div>
+        <div class="p-over"><a href="https://anaysf14.github.io/TO-DO-PRO-PWA/" class="p-over-btn">Ver proyecto ↗</a></div>
+        <div class="p-body">
+          <div class="p-meta"><span class="p-badge">Universidad</span><span class="p-yr">2024</span></div>
+          <h3>App de Notas</h3>
+          <p>Página web con sistema de CRUD, agregar, editar o eliminar notas.</p>
+          <div class="p-stack"><span>HTML</span><span>CSS</span><span>JS</span><span>PHP</span></div>
+        </div>
+      </div>
+
+      <div class="p-card reveal" data-cat="web">
+        <div class="p-img game-img">
+          <div class="p-img-code"><span class="c-kw">class</span> <span class="c-cn">Player</span>(pygame.sprite):<br>&nbsp;&nbsp;<span class="c-kw">def</span> <span class="c-fn">update</span>(self):<br>&nbsp;&nbsp;&nbsp;&nbsp;self.<span class="c-fn">check_collision</span>()<br>&nbsp;&nbsp;&nbsp;&nbsp;self.<span class="c-fn">move</span>()</div>
+        </div>
+        <div class="p-over"><a href="https://github.com/anaysf14" target="_blank" class="p-over-btn">Ver en GitHub ↗</a></div>
+        <div class="p-body">
+          <div class="p-meta"><span class="p-badge">Universidad</span><span class="p-yr">2023</span></div>
+          <h3>Videojuego — Godot</h3>
+          <p>Videojuego 2D con niveles, colisiones y enemigos. Godot Engine.</p>
+          <div class="p-stack"><span>Godot</span><span>Python</span></div>
+        </div>
+      </div>
+
+      <div class="p-card wip-card reveal" data-cat="wip">
+        <div class="p-img dash-img">
+          <div class="p-img-code"><span class="c-kw">const</span> <span class="c-pr">Lectura</span> = () =&gt; (<br>&nbsp;&nbsp;&lt;<span class="c-cn">Chart</span> data={metrics}<br>&nbsp;&nbsp;&nbsp;&nbsp;type=<span class="c-st">"clinical"</span> /&gt;<br>)</div>
+        </div>
+        <div class="p-over"><a href="#" class="p-over-btn">Próximamente...</a></div>
+        <div class="p-body">
+          <div class="p-meta"><span class="p-badge blue-b">🔨 En construcción</span><span class="p-yr">2025</span></div>
+          <h3>App de Lectura — React</h3>
+          <p>Visualización, organización de metas y logros de lectura.</p>
+          <div class="p-stack"><span>React</span><span>SQL</span><span>REST API</span><span>Odoo</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EXPERIENCE ═══ -->
+<section id="experience">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-n">04.</span>
+      <h2>Experiencia <span class="gold">&amp; Educación</span></h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="timeline">
+
+      <div class="tl-entry reveal">
+        <div class="tl-dot dot-gold"></div>
+        <div class="tl-card">
+          <span class="tl-badge">Trabajo actual</span>
+          <span class="tl-date">2026 — presente</span>
+          <h3>Área de Sistemas — Implementación ERP</h3>
+          <span class="tl-co">SigueMED · Clínica Familiar · Aguascalientes</span>
+          <p>Lidero la implementación de Odoo Enterprise 19. Desarrollo de módulos clínicos personalizados: expedientes, hoja de enfermería, nota médica, farmacia POS, control de inventario, facturación y suscripciones. Administración Microsoft 365 y DNS institucional.</p>
+          <div class="tl-tags"><span>Odoo 19</span><span>Python</span><span>Studio</span><span>PostgreSQL</span><span>M365</span></div>
+        </div>
+      </div>
+
+      <div class="tl-entry reveal">
+        <div class="tl-dot dot-blue"></div>
+        <div class="tl-card">
+          <span class="tl-badge tl-edu">Ingeniería</span>
+          <span class="tl-date">Agosto 2024 — Abril 2026</span>
+          <h3>Ingeniería en Desarrollo y Gestión de Software</h3>
+          <span class="tl-co">Universidad Tecnológica de Aguascalientes</span>
+          <p>Continuación hacia ingeniería. Proyecto terminal: implementación ERP en SigueMED como reporte de estadías.</p>
+          <div class="tl-tags"><span>ERP</span><span>Gestión</span><span>Sistemas</span></div>
+        </div>
+      </div>
+
+      <div class="tl-entry reveal">
+        <div class="tl-dot dot-blue"></div>
+        <div class="tl-card">
+          <span class="tl-badge tl-edu">TSU</span>
+          <span class="tl-date">Agosto 2022 — Agosto 2024</span>
+          <h3>Técnico Superior — Desarrollo de Software Multiplataforma</h3>
+          <span class="tl-co">Universidad Tecnológica de Aguascalientes</span>
+          <p>Formación en programación web y móvil, bases de datos, APIs y seguridad. Proyectos reales: Páginas web informativa, videojuego, gestión de inventarios, App de Notas.</p>
+          <div class="tl-tags"><span>JavaScript</span><span>React</span><span>Python</span><span>PHP</span><span>MySQL</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-n">05.</span>
+      <h2>¿Hablamos de tu <span class="gold">proyecto?</span></h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-left reveal">
+        <p class="ct-intro">Estoy abierta a colaboraciones, proyectos freelance y oportunidades en desarrollo de software y sistemas ERP.</p>
+        <div class="ct-links">
+          <a href="mailto:erikaanaysm@gmail.com" class="ct-link">
+            <div class="ct-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8l10 6 10-6"/></svg></div>
+            <div><span class="ct-lbl">Email</span><span class="ct-val">erikaanaysm@gmail.com</span></div>
+            <svg class="ct-arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19L19 5M5 5h14v14"/></svg>
+          </a>
+          <a href="https://github.com/AnaysF14" target="_blank" class="ct-link">
+            <div class="ct-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div>
+            <div><span class="ct-lbl">GitHub</span><span class="ct-val">anaysf14.github.io</span></div>
+            <svg class="ct-arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19L19 5M5 5h14v14"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/anaysf14/" target="_blank" class="ct-link">
+            <div class="ct-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+            <div><span class="ct-lbl">LinkedIn</span><span class="ct-val">linkedin.com/in/anaysf14</span></div>
+            <svg class="ct-arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19L19 5M5 5h14v14"/></svg>
+          </a>
+          <a href="tel:4491724042" class="ct-link">
+            <div class="ct-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.16h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6z"/></svg></div>
+            <div><span class="ct-lbl">Teléfono</span><span class="ct-val">449 172 4042</span></div>
+            <svg class="ct-arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19L19 5M5 5h14v14"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="contact-right reveal">
+        <div class="form-card">
+          <div class="form-bar">
+            <span class="wdot r"></span><span class="wdot y"></span><span class="wdot g"></span>
+            <span class="form-t">nuevo_mensaje.send()</span>
+          </div>
+          <div class="form-inner">
+            <div class="f-field"><label>nombre <span class="req">*</span></label><input type="text" placeholder="Tu nombre completo"></div>
+            <div class="f-field"><label>email <span class="req">*</span></label><input type="email" placeholder="tu@correo.com"></div>
+            <div class="f-field"><label>asunto</label><input type="text" placeholder="Proyecto / colaboración / trabajo"></div>
+            <div class="f-field"><label>mensaje <span class="req">*</span></label><textarea placeholder="Cuéntame sobre tu proyecto..."></textarea></div>
+            <button class="f-send" id="fSend">
+              <span id="fTxt">Enviar mensaje</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-brand"><span class="bracket">&lt;</span>AF<span class="bracket">/&gt;</span></div>
+    <p class="ft-copy">© 2025 Erika Anays Morales Flores.</p>
+    <div class="ft-links">
+      <a href="https://github.com/AnaysF14" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/anaysf14/" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/particles.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
