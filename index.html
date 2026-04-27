@@ -245,99 +245,189 @@
   </div>
 </section>
 
-<!-- ═══ PROJECTS ═══ -->
+<!-- ═══════════════════════════════════════
+     SECCIÓN PROYECTOS — con imágenes reales
+     Pega esto dentro de tu index.html
+     en lugar de la sección id="projects"
+════════════════════════════════════════ -->
+
+<!-- ════════ PROJECTS ════════ -->
 <section id="projects">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="sec-n">03.</span>
-      <h2>Mis <span class="gold">proyectos</span></h2>
-      <div class="sec-line"></div>
+  <div class="wrap">
+    <div class="sh reveal">
+      <span class="sh-n">// 03</span>
+      <h2>mis<span class="mint">_proyectos</span></h2>
+      <div class="sh-line"></div>
     </div>
 
-    <div class="pf-wrap reveal">
-      <button class="pf-btn active" data-f="all">todos</button>
-      <button class="pf-btn" data-f="erp">ERP / Odoo</button>
-      <button class="pf-btn" data-f="web">web / app</button>
-      <button class="pf-btn" data-f="wip">en construcción</button>
+    <div class="pf-row reveal">
+      <button class="pf active" data-f="all">all()</button>
+      <button class="pf" data-f="erp">erp_odoo()</button>
+      <button class="pf" data-f="web">web_app()</button>
+      <button class="pf" data-f="wip">building()</button>
     </div>
 
-    <div class="proj-grid">
+    <div class="pg">
 
-      <div class="p-card featured reveal" data-cat="erp">
-        <div class="p-img erp-img">
-          <div class="p-img-code"><span class="c-kw">import</span> odoo<br><span class="c-kw">class</span> <span class="c-cn">SigueMED</span>(models.Model):<br>&nbsp;&nbsp;<span class="c-pr">_name</span> = <span class="c-st">'clinic.record'</span></div>
+      <!-- 1. SigueMED — ERP Clínico -->
+      <div class="pc featured reveal" data-cat="erp">
+        <div class="pc-img-real">
+          <img src="assets/siguemed.webp" alt="SigueMED ERP Clínico" loading="lazy">
+          <div class="pir-overlay">
+            <span class="pir-tag">ERP · Odoo 19</span>
+          </div>
         </div>
-        <div class="p-over"><a href="#" class="p-over-btn">Ver proyecto ↗</a></div>
-        <div class="p-body">
-          <div class="p-meta"><span class="p-badge gold-b">⭐ Destacado</span><span class="p-yr">2026–presente</span></div>
+        <div class="pc-ov"><a href="#" class="pc-btn">ver_proyecto() ↗</a></div>
+        <div class="pc-body">
+          <div class="pc-meta"><span class="pc-badge mint-b">★ destacado</span><span class="pc-yr">2024–hoy</span></div>
           <h3>SigueMED — ERP Clínico</h3>
-          <p>Implementación completa de Odoo Enterprise 19. Expediente médico, nota médica, hoja de enfermería, farmacia POS, inventario, facturación y suscripciones.</p>
-          <div class="p-stack"><span>Odoo 19</span><span>Python</span><span>XML</span><span>Studio</span><span>PostgreSQL</span></div>
+          <p>Implementación completa de Odoo Enterprise 19. Expediente médico, farmacia POS, inventario, facturación y suscripciones para clínica familiar.</p>
+          <div class="pc-stack"><span>Odoo 19</span><span>Python</span><span>XML</span><span>Studio</span><span>PostgreSQL</span></div>
         </div>
       </div>
 
-      <div class="p-card reveal" data-cat="web">
-        <div class="p-img qr-img">
-          <div class="p-img-code"><span class="c-kw">def</span> <span class="c-fn">scan_qr</span>(student_id):<br>&nbsp;&nbsp;attendance.<span class="c-fn">register</span>(<br>&nbsp;&nbsp;&nbsp;&nbsp;student_id, now()<br>&nbsp;&nbsp;)</div>
+      <!-- 2. MovieInf -->
+      <div class="pc reveal" data-cat="web">
+        <div class="pc-img-real">
+          <img src="assets/movieinf.jpg" alt="MovieInf App" loading="lazy">
+          <div class="pir-overlay">
+            <span class="pir-tag">Web App</span>
+          </div>
         </div>
-        <div class="p-over"><a href="https://movieinf.vercel.app/" class="p-over-btn">Ver proyecto ↗</a></div>
-        <div class="p-body">
-          <div class="p-meta"><span class="p-badge">Universidad</span><span class="p-yr">2023</span></div>
-          <h3>App informativa Movieinf</h3>
-          <p>Información de nuevas películas, administración y control de películas por ver, reseñas, recordatorios.</p>
-          <div class="p-stack"><span>Python</span><span>JavaScript</span><span>MySQL</span></div>
-        </div>
-      </div>
-
-      <div class="p-card reveal" data-cat="web">
-        <div class="p-img pos-img">
-          <div class="p-img-code"><span class="c-kw">const</span> <span class="c-pr">checkout</span> = (<span class="c-va">cart</span>) =&gt; {<br>&nbsp;&nbsp;<span class="c-kw">return</span> cart.<span class="c-fn">reduce</span>(<br>&nbsp;&nbsp;&nbsp;&nbsp;(t,i) =&gt; t + i.price, <span class="c-st">0</span><br>&nbsp;&nbsp;)<br>}</div>
-        </div>
-        <div class="p-over"><a href="#" class="p-over-btn">Ver proyecto ↗</a></div>
-        <div class="p-body">
-          <div class="p-meta"><span class="p-badge">Universidad </span><span class="p-yr">2025</span></div>
-          <h3>Punto de Venta</h3>
-          <p>POS completo para empresa real. Gestión de productos, inventario, ventas y generación de reportes.</p>
-          <div class="p-stack"><span>JavaScript</span><span>PHP</span><span>MySQL</span></div>
+        <div class="pc-ov"><a href="https://movieinf.vercel.app/" target="_blank" class="pc-btn">ver_live() ↗</a></div>
+        <div class="pc-body">
+          <div class="pc-meta"><span class="pc-badge">Universidad</span><span class="pc-yr">2023</span></div>
+          <h3>MovieInf — App de Películas</h3>
+          <p>Explorador de películas con reseñas, watchlist personal, recomendaciones y comunidad. Información de estrenos y catálogo completo.</p>
+          <div class="pc-stack"><span>JavaScript</span><span>HTML/CSS</span><span>MySQL</span></div>
         </div>
       </div>
 
-      <div class="p-card reveal" data-cat="web">
-        <div class="p-img citas-img">
-          <div class="p-img-code"><span class="c-cn">POST</span> /api/citas<br>{ <span class="c-pr">Notas</span>: <span class="c-st">"Dr. García"</span>,<br>&nbsp;&nbsp;<span class="c-pr">date</span>: <span class="c-st">"2025-05-10"</span>,<br>&nbsp;&nbsp;<span class="c-pr">patient</span>: patient_id }</div>
+      <!-- 3. To-Do Pro -->
+      <div class="pc reveal" data-cat="web">
+        <div class="pc-img-real">
+          <img src="assets/todo.jpg" alt="To-Do Pro PWA" loading="lazy">
+          <div class="pir-overlay">
+            <span class="pir-tag">PWA</span>
+          </div>
         </div>
-        <div class="p-over"><a href="https://anaysf14.github.io/TO-DO-PRO-PWA/" class="p-over-btn">Ver proyecto ↗</a></div>
-        <div class="p-body">
-          <div class="p-meta"><span class="p-badge">Universidad</span><span class="p-yr">2024</span></div>
-          <h3>App de Notas</h3>
-          <p>Página web con sistema de CRUD, agregar, editar o eliminar notas.</p>
-          <div class="p-stack"><span>HTML</span><span>CSS</span><span>JS</span><span>PHP</span></div>
-        </div>
-      </div>
-
-      <div class="p-card reveal" data-cat="web">
-        <div class="p-img game-img">
-          <div class="p-img-code"><span class="c-kw">class</span> <span class="c-cn">Player</span>(pygame.sprite):<br>&nbsp;&nbsp;<span class="c-kw">def</span> <span class="c-fn">update</span>(self):<br>&nbsp;&nbsp;&nbsp;&nbsp;self.<span class="c-fn">check_collision</span>()<br>&nbsp;&nbsp;&nbsp;&nbsp;self.<span class="c-fn">move</span>()</div>
-        </div>
-        <div class="p-over"><a href="https://github.com/anaysf14" target="_blank" class="p-over-btn">Ver en GitHub ↗</a></div>
-        <div class="p-body">
-          <div class="p-meta"><span class="p-badge">Universidad</span><span class="p-yr">2023</span></div>
-          <h3>Videojuego — Godot</h3>
-          <p>Videojuego 2D con niveles, colisiones y enemigos. Godot Engine.</p>
-          <div class="p-stack"><span>Godot</span><span>Python</span></div>
+        <div class="pc-ov"><a href="https://anaysf14.github.io/TO-DO-PRO-PWA/" target="_blank" class="pc-btn">ver_live() ↗</a></div>
+        <div class="pc-body">
+          <div class="pc-meta"><span class="pc-badge">Universidad</span><span class="pc-yr">2024</span></div>
+          <h3>To-Do Pro — PWA</h3>
+          <p>App de tareas Progressive Web App. CRUD completo, instalable en móvil y escritorio, funciona sin conexión.</p>
+          <div class="pc-stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PWA</span></div>
         </div>
       </div>
 
-      <div class="p-card wip-card reveal" data-cat="wip">
-        <div class="p-img dash-img">
-          <div class="p-img-code"><span class="c-kw">const</span> <span class="c-pr">Lectura</span> = () =&gt; (<br>&nbsp;&nbsp;&lt;<span class="c-cn">Chart</span> data={metrics}<br>&nbsp;&nbsp;&nbsp;&nbsp;type=<span class="c-st">"clinical"</span> /&gt;<br>)</div>
+      <!-- 4. Videojuego Guardianes del Bosque -->
+      <div class="pc reveal" data-cat="web">
+        <div class="pc-img-real">
+          <img src="assets/game.jpg" alt="Guardianes del Bosque" loading="lazy">
+          <div class="pir-overlay">
+            <span class="pir-tag">Game · Godot</span>
+          </div>
         </div>
-        <div class="p-over"><a href="#" class="p-over-btn">Próximamente...</a></div>
-        <div class="p-body">
-          <div class="p-meta"><span class="p-badge blue-b">🔨 En construcción</span><span class="p-yr">2025</span></div>
-          <h3>App de Lectura — React</h3>
-          <p>Visualización, organización de metas y logros de lectura.</p>
-          <div class="p-stack"><span>React</span><span>SQL</span><span>REST API</span><span>Odoo</span></div>
+        <div class="pc-ov">
+          <a href="https://github.com/anaysf14" target="_blank" class="pc-btn">ver_github() ↗</a>
+        </div>
+        <div class="pc-body">
+          <div class="pc-meta"><span class="pc-badge">Universidad</span><span class="pc-yr">2023</span></div>
+          <h3>Guardianes del Bosque</h3>
+          <p>Videojuego 2D de aventura con combate, espíritus e historia. Diseñado en Godot Engine, exportado a Web, Android y .exe.</p>
+          <div class="pc-stack"><span>Godot</span><span>GDScript</span><span>Android</span></div>
+        </div>
+      </div>
+
+      <!-- 5. Punto de Venta -->
+      <div class="pc reveal" data-cat="web">
+        <div class="pc-img-real">
+          <img src="assets/pos.jpg" alt="Punto de Venta Covamsa" loading="lazy">
+          <div class="pir-overlay">
+            <span class="pir-tag">Full Stack</span>
+          </div>
+        </div>
+        <div class="pc-ov"><a href="#" class="pc-btn">ver_proyecto() ↗</a></div>
+        <div class="pc-body">
+          <div class="pc-meta"><span class="pc-badge">Covamsa</span><span class="pc-yr">2023</span></div>
+          <h3>Punto de Venta — Covamsa</h3>
+          <p>POS completo para empresa real. Gestión de productos, inventario, ventas, reportes y cierre de caja.</p>
+          <div class="pc-stack"><span>JavaScript</span><span>PHP</span><span>MySQL</span></div>
+        </div>
+      </div>
+
+      <!-- 6. Dashboard Clínico (WIP) -->
+      <div class="pc wip reveal" data-cat="wip">
+        <div class="pc-img-real wip-img">
+          <div class="wip-placeholder">
+            <div class="wip-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17h7M17.5 14v7"/></svg>
+            </div>
+            <span class="wip-label">en construcción</span>
+            <div class="wip-progress">
+              <div class="wip-bar"></div>
+            </div>
+            <span class="wip-pct">35%</span>
+          </div>
+        </div>
+        <div class="pc-ov"><a href="#" class="pc-btn">próximamente...</a></div>
+        <div class="pc-body">
+          <div class="pc-meta"><span class="pc-badge blue-b">⚙ building</span><span class="pc-yr">2025</span></div>
+          <h3>Dashboard Clínico — React</h3>
+          <p>Visualización de métricas clínicas en tiempo real: citas, ingresos por médico, inventario. Conectado a API REST de Odoo.</p>
+          <div class="pc-stack"><span>React</span><span>REST API</span><span>Recharts</span><span>Odoo</span></div>
+        </div>
+      </div>
+
+      <!-- 7. Portafolio Web (nuevo proyecto visible) -->
+      <div class="pc reveal" data-cat="web">
+        <div class="pc-img-real portfolio-img">
+          <div class="portfolio-preview">
+            <div class="pp-nav">
+              <span class="pp-dot r"></span><span class="pp-dot y"></span><span class="pp-dot g"></span>
+              <span class="pp-url">anaysf14.github.io</span>
+            </div>
+            <div class="pp-body">
+              <div class="pp-bar"></div>
+              <div class="pp-grid">
+                <div class="pp-block pp-b1"></div>
+                <div class="pp-block pp-b2"></div>
+                <div class="pp-block pp-b3"></div>
+              </div>
+              <div class="pp-text"></div>
+              <div class="pp-text pp-t2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="pc-ov"><a href="https://anaysf14.github.io/" target="_blank" class="pc-btn">ver_live() ↗</a></div>
+        <div class="pc-body">
+          <div class="pc-meta"><span class="pc-badge mint-b">★ personal</span><span class="pc-yr">2025</span></div>
+          <h3>Portafolio Web Personal</h3>
+          <p>Este portafolio. Diseñado y desarrollado desde cero con HTML, CSS y JavaScript puro. Animaciones, partículas y diseño terminal.</p>
+          <div class="pc-stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
+        </div>
+      </div>
+
+      <!-- 8. App de Lectura (WIP) -->
+      <div class="pc wip reveal" data-cat="wip">
+        <div class="pc-img-real wip-img">
+          <div class="wip-placeholder reading-wip">
+            <div class="wip-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <span class="wip-label">en construcción</span>
+            <div class="wip-progress">
+              <div class="wip-bar" style="width:20%"></div>
+            </div>
+            <span class="wip-pct">20%</span>
+          </div>
+        </div>
+        <div class="pc-ov"><a href="#" class="pc-btn">próximamente...</a></div>
+        <div class="pc-body">
+          <div class="pc-meta"><span class="pc-badge blue-b">⚙ building</span><span class="pc-yr">2025</span></div>
+          <h3>ReadLog — App de Lectura</h3>
+          <p>Tracker de libros con metas de lectura, progreso, estadísticas y recomendaciones. React + localStorage + API de libros.</p>
+          <div class="pc-stack"><span>React</span><span>JavaScript</span><span>Open Library API</span></div>
         </div>
       </div>
 
